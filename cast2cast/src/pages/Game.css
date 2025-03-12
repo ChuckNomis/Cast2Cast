@@ -1,0 +1,105 @@
+/* Game Container */
+.game-container {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Target Actor */
+.target-actor-text {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Centered Card */
+.center-card {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Actor & Movie Cards (Same Size) */
+.actor-card,
+.movie-card {
+  width: 160px; /* Same width for both */
+  height: 230px; /* Same height for both */
+  border: 2px solid white;
+  box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.2);
+  background-color: #3e4a61;
+  padding: 10px;
+  border-radius: 10px;
+  border-color:rgb(26, 36, 54);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.actor-card:hover,
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+/* Ensure images inside actor & movie cards are the same size */
+.actor-card img,
+.movie-card img {
+  width: 140px; /* Ensures all images are uniform */
+  height: 180px; /* Ensures all images are uniform */
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Actor & Movie Name Styling */
+.actor-card h3,
+.movie-card h3 {
+  font-size: 15px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+/* Choices Section */
+.choices-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Steps Counter */
+.teps-counter {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Win Message */
+.win-message {
+  text-align: center;
+  padding: 20px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 10px;
+}
+
+.win-message h2 {
+  margin-bottom: 10px;
+}
+
+.win-message button {
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  background-color: white;
+  color: #4caf50;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.win-message button:hover {
+  background-color: #f1f1f1;
+}

@@ -1,0 +1,22 @@
+/* Header.css */
+.game-header {
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .game-header-container {
+    background-color: #3e4a61;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Reduce spacing between actors */
+    max-width: 600px; /* Make it smaller */
+    margin: auto; /* Center it */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 25px;
+    border: 5px solid;
+    border-color: rgba(0, 0, 0, 0.467);
+  }

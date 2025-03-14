@@ -1,0 +1,46 @@
+/* Select Page Styling */
+.select-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Top Logo */
+.top-logo {
+  width: 150px;
+  margin-top: 40px;
+  cursor: pointer;
+
+}
+
+
+/* Selected Actors Container */
+.selected-actors-container {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+
+/* Arrow Icon */
+.arrow-icon {
+  width: 60px;
+  height: auto;
+}
+
+/* */
+.button-container{
+  margin-left: 30px;
+  margin-top: 150px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+

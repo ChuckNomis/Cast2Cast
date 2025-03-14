@@ -1,3 +1,66 @@
 body {
-    background-color: #121212; /* Change this to your desired color */
+    background-color: #1d1831; /* Change this to your desired color */
+}
+/* Actor & Movie Cards (Same Size) */
+.actor-card,
+.movie-card {
+  width: 140px; /* Same width for both */
+  height: 200px; /* Same height for both */
+  border: 2px solid white;
+  box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.2);
+  background-color: #3e4a61;
+  padding: 10px;
+  border-radius: 25px;
+  border-color:rgb(26, 36, 54);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.actor-card:hover,
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+/* Ensure images inside actor & movie cards are the same size */
+.actor-card img,
+.movie-card img {
+  width: 140px; /* Ensures all images are uniform */
+  height: 140px; /* Ensures all images are uniform */
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Actor & Movie Name Styling */
+.actor-card h3,
+.movie-card h3 {
+  font-size: 25px;
+  margin-top: 5px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-family: "Lilita One";
+}
+
+/* Start Button */
+.button {
+  font-family: "Lilita One", sans-serif;
+  font-size: 45px;
+  font-weight: bold;
+  color: white;
+  background-color: #43618c;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 5px 5px 0px #ffffff; /* White shadow effect */
+  transition:box-shadow 0.2s ease,background-color 0.1s ease-in-out;
+  
+}
+.button:hover {
+  background-color: #28364a;
+  box-shadow: 7px 7px 0px #ffffff42;
 }

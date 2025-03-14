@@ -18,48 +18,6 @@
   margin-bottom: 20px;
 }
 
-/* Actor & Movie Cards (Same Size) */
-.actor-card,
-.movie-card {
-  width: 160px; /* Same width for both */
-  height: 230px; /* Same height for both */
-  border: 2px solid white;
-  box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.2);
-  background-color: #3e4a61;
-  padding: 10px;
-  border-radius: 10px;
-  border-color:rgb(26, 36, 54);
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.actor-card:hover,
-.movie-card:hover {
-  transform: scale(1.05);
-}
-
-/* Ensure images inside actor & movie cards are the same size */
-.actor-card img,
-.movie-card img {
-  width: 140px; /* Ensures all images are uniform */
-  height: 180px; /* Ensures all images are uniform */
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-/* Actor & Movie Name Styling */
-.actor-card h3,
-.movie-card h3 {
-  font-size: 15px;
-  margin-top: 5px;
-  text-align: center;
-}
-
 /* Choices Section */
 .choices-container {
   display: flex;

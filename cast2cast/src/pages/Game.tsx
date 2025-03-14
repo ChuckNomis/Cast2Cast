@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import {
-  fetchRandomActor,
   fetchMoviesByActor,
   fetchCastByMovie,
   fetchActorById,
@@ -9,41 +9,15 @@ import Header from "../components/Header";
 import "./Game.css";
 
 const Game = () => {
-  const [startActor, setStartActor] = useState<any>(null);
-  const [targetActor, setTargetActor] = useState<any>(null);
-  const [currentActor, setCurrentActor] = useState<any>(null);
+  const location = useLocation();
+  const { startActor, targetActor } = location.state || {}; // Receive actors from Select.tsx
+  const [currentActor, setCurrentActor] = useState<any>(startActor);
   const [currentMovies, setCurrentMovies] = useState<any[]>([]);
   const [currentMovie, setCurrentMovie] = useState<any>(null);
   const [currentCast, setCurrentCast] = useState<any[]>([]);
   const [steps, setSteps] = useState(0);
   const [loading, setLoading] = useState(true);
   const [gameWon, setGameWon] = useState(false);
-
-  useEffect(() => {
-    const loadActors = async () => {
-      setLoading(true);
-      let actor1 = await fetchRandomActor();
-      let actor2 = await fetchRandomActor();
-      while (actor2.id === actor1.id) {
-        actor2 = await fetchRandomActor();
-      }
-      let actor1Data = await fetchActorById(actor1.id);
-      let actor2Data = await fetchActorById(actor2.id);
-      console.log(actor1Data);
-      console.log(actor1);
-      console.log(actor2Data);
-      setStartActor(actor1);
-      setTargetActor(actor2);
-      setCurrentActor(actor1);
-      if (actor1) {
-        const movies = await fetchMoviesByActor(actor1.id);
-        setCurrentMovies(movies);
-      }
-      setLoading(false);
-    };
-
-    loadActors();
-  }, []);
 
   // Handle when a movie is clicked
   const handleMovieClick = async (movie: any) => {

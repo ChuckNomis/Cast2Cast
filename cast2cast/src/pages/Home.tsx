@@ -10,14 +10,14 @@ const Home = () => {
     <div className="home-container">
       {/* Game Logo */}
       <img src={logo} alt="Cast2Cast Logo" className="home-logo" />
-
-      {/* Start Button */}
-      <button className="start-button" onClick={() => navigate("/game")}>
-        START
-      </button>
-
-      {/* Settings Button */}
-      <img src={settingsIcon} alt="Settings" className="settings-icon" />
+      <div className="home-container-buttons">
+        {/* Start Button */}
+        <button className="button" onClick={() => navigate("/Select")}>
+          START
+        </button>
+        {/* Settings Button */}
+        <img src={settingsIcon} alt="Settings" className="settings-button" />
+      </div>
     </div>
   );
 };

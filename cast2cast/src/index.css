@@ -1,50 +1,43 @@
 body {
     background-color: #1d1831; /* Change this to your desired color */
 }
-/* Actor & Movie Cards (Same Size) */
-.actor-card,
-.movie-card {
-  width: 140px; /* Same width for both */
-  height: 200px; /* Same height for both */
-  border: 2px solid white;
-  box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.2);
-  background-color: #3e4a61;
-  padding: 10px;
-  border-radius: 25px;
-  border-color:rgb(26, 36, 54);
-  text-align: center;
-  cursor: pointer;
+/* Card Container */
+.movie-card, .actor-card {
+  position: relative;
+  width: 180px; /* Adjust to match the design */
+  height: 230px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Depth effect */
   transition: transform 0.2s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
 }
 
-.actor-card:hover,
-.movie-card:hover {
-  transform: scale(1.05);
-}
-
-/* Ensure images inside actor & movie cards are the same size */
-.actor-card img,
-.movie-card img {
-  width: 140px; /* Ensures all images are uniform */
-  height: 140px; /* Ensures all images are uniform */
-  border-radius: 10px;
+/* Image inside the card */
+.movie-image, .actor-image {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  border-radius: 15px;
 }
 
-/* Actor & Movie Name Styling */
-.actor-card h3,
-.movie-card h3 {
-  font-size: 25px;
-  margin-top: 5px;
+/* Title Overlay */
+.movie-title, .actor-title {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
   text-align: center;
-  color: rgb(255, 255, 255);
-  font-family: "Lilita One";
+  background: rgba(0, 0, 0, 0.823); /* Dark overlay */
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px 0;
+  font-family: "Lilita One", sans-serif;
 }
 
+/* Hover Effect */
+.movie-card:hover, .actor-card:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+}
 /* Start Button */
 .button {
   font-family: "Lilita One", sans-serif;

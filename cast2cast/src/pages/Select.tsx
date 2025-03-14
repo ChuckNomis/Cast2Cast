@@ -62,18 +62,20 @@ const Select = () => {
           <div className="selected-actors-container">
             <div className="actor-card">
               <img
-                src={`https://image.tmdb.org/t/p/w200${startActor.profile_path}`}
+                src={`https://image.tmdb.org/t/p/w300${startActor.profile_path}`}
                 alt={startActor.name}
+                className="actor-image"
               />
-              <h3>{startActor.name}</h3>
+              <div className="actor-title">{startActor.name}</div>
             </div>
             <img src={arrow} alt="Arrow icon" className="arrow-icon" />
             <div className="actor-card">
               <img
-                src={`https://image.tmdb.org/t/p/w200${targetActor.profile_path}`}
+                src={`https://image.tmdb.org/t/p/w300${targetActor.profile_path}`}
                 alt={targetActor.name}
+                className="actor-image"
               />
-              <h3>{targetActor.name}</h3>
+              <div className="actor-title">{targetActor.name}</div>
             </div>
           </div>
           <div className="button-container">

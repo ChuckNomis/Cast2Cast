@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import "./Select.css"; // Import CSS for styling
 import logo from "../assets/Small-logo.png";
 import arrow from "../assets/Arrow.png";
+import RandomActorPhoto from "../assets/RandomActor.png";
+import questionMark from "../assets/Questionmark.png";
 import { fetchRandomActor, fetchActorById } from "../api/tmdb";
 
 const Select = () => {
@@ -54,42 +56,48 @@ const Select = () => {
         className="top-logo"
         onClick={handleLogoClick}
       />
-
       {loading ? (
-        <h3>Loading...</h3>
+        <div className="selected-actors-container">
+          <div className="actor-card">
+            <img className="actor-image" src={RandomActorPhoto} />
+          </div>
+          <img src={arrow} alt="Arrow icon" className="arrow-icon" />
+          <div className="actor-card">
+            <img className="actor-image" src={RandomActorPhoto} />
+          </div>
+        </div>
       ) : (
-        <>
-          <div className="selected-actors-container">
-            <div className="actor-card">
-              <img
-                src={`https://image.tmdb.org/t/p/w300${startActor.profile_path}`}
-                alt={startActor.name}
-                className="actor-image"
-              />
-              <div className="actor-title">{startActor.name}</div>
-            </div>
-            <img src={arrow} alt="Arrow icon" className="arrow-icon" />
-            <div className="actor-card">
-              <img
-                src={`https://image.tmdb.org/t/p/w300${targetActor.profile_path}`}
-                alt={targetActor.name}
-                className="actor-image"
-              />
-              <div className="actor-title">{targetActor.name}</div>
-            </div>
+        <div className="selected-actors-container">
+          <div className="actor-card">
+            <img
+              src={`https://image.tmdb.org/t/p/w300${startActor.profile_path}`}
+              alt={startActor.name}
+              className="actor-image"
+            />
+            <div className="actor-title">{startActor.name}</div>
           </div>
-          <div className="button-container">
-            {/* GO Button */}
-            <button className="button" onClick={handleGoClick}>
-              GO
-            </button>
-            {/* Reroll Button */}
-            <button className="button" onClick={handleReroll}>
-              Reroll
-            </button>
+          <img src={arrow} alt="Arrow icon" className="arrow-icon" />
+          <div className="actor-card">
+            <img
+              src={`https://image.tmdb.org/t/p/w300${targetActor.profile_path}`}
+              alt={targetActor.name}
+              className="actor-image"
+            />
+            <div className="actor-title">{targetActor.name}</div>
           </div>
-        </>
+        </div>
       )}
+
+      <div className="button-container">
+        {/* GO Button */}
+        <button className="button" onClick={handleGoClick}>
+          GO
+        </button>
+        {/* Reroll Button */}
+        <button className="button" onClick={handleReroll}>
+          Reroll
+        </button>
+      </div>
     </div>
   );
 };

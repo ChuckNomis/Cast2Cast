@@ -1,4 +1,4 @@
-/* 🎬 Full Screen Game Layout */
+/* Full Screen Game Layout */
 .game-container {
   display: flex;
   flex-direction: column;
@@ -13,11 +13,44 @@
   align-items: center;
 }
 
-/* ✅ Grid Layout for Choices */
+/* Grid Layout for Choices */
 .choices-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 30px;
   margin-top: 20px;
+  align-items: center;
 }
+.win-popup{
+  color: aliceblue;
+  background-color: hwb(0 23% 76% / 0.371);
+  margin-top: 150px;
+  border-radius: 25px;
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 25px;
+  gap: 50px;
+}
+.win-text-container{
+  font-family: "Lilita One", sans-serif;
+  font-size: 25px;
+}
+.win-buttons-container{
+  display: flex;
+  gap: 20px;
+}
+/* Divider Line Between Center Card & Movies */
+.divider-line {
+  width: 83%;
+  margin-top: 50px;
+  margin-bottom: 30px;
+
+  height: 6px;
+  background-color: #7EA6D6; 
+  border-radius: 5px;
+}
+
+
 
